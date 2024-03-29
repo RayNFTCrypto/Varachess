@@ -13,9 +13,11 @@
     "@heroicons/react": "^2.1.1",
     "accept-language": "^3.0.18",
     "date-fns": "^3.6.0",
+    "framer-motion": "^11.0.23",
     "i18next": "^23.10.1",
     "i18next-resources-to-backend": "^1.2.0",
     "next": "14.1.4",
+    "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
     "react-i18next": "^14.1.0"

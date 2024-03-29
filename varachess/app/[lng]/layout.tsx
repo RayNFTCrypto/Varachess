@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { languages } from "../i18/settings";
-import "../../styles/globals.css"
+import { languages } from "../i18n/settings";
+import "../../styles/globals.css";
+import ClientThemeProvider from "./theme_provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`bg-principal ${inter.className}`}>
+        <ClientThemeProvider>{children}</ClientThemeProvider>
+      </body>
     </html>
   );
 }
+

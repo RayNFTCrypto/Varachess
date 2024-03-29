@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+  .flat-button {
+    @apply p-3 rounded-xl bg-button border border-button hover:bg-button/75 hover:border-button/75 font-sans font-light text-center w-full;
+  }
+  .outlined-button {
+    @apply p-3 rounded-xl border-white border font-sans hover:bg-white/20 font-light text-center w-full;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

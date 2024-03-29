@@ -13,6 +13,8 @@ const config: Config = {
       white: "#fff",
       transparent: 'transparent',
       current: 'currentColor',
+      principal: '#3C7E7E',
+      button: '#19CFB9',
       slate: {
         50: "#f8fafc",
         100: "#f1f5f9",
