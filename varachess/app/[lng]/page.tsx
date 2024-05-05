@@ -2,7 +2,7 @@ import Image from "next/image";
 import MainLayout from "./components/MainLayout";
 import { TrophyIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "../i18n";
-import { varaChess } from "@/constants/home";
+import { features, varaChess } from "@/constants/home";
 import HomeCard from "./components/HomeCards";
 import { FlatButton, OutlinedButton } from "./components/Buttons";
 import { FadeInSection } from "./components/FadeIn";
@@ -96,6 +96,21 @@ export default async function Page({ params: { lng } }: PageProps) {
             <div className="animate-pulse rounded-2xl bg-gray-400">
               <div className="min-h-96"></div>
             </div>
+          </div>
+        </div>
+      </FadeInSection>
+      <FadeInSection>
+      <div className="min-h-screen max-w-7xl mx-auto flex flex-col items-center justify-center px-10 md:px-5 lg:px-0 my-12 md:my-0">
+
+          <h2 className="font-sans font-light text-white text-3xl md:text-6xl text-center">
+            {t("features_title")}
+          </h2>
+          <div className="mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {features.map((feature, index) => (
+              <div key={index}>
+                <HomeCard title={feature.title} subtitle={feature.body} />
+              </div>
+            ))}
           </div>
         </div>
       </FadeInSection>
